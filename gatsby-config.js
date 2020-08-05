@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Guielu Fotografia`,
-    description: `Amamos contar histórias e registra-las através da fotografia. Queremos registrar a sua para que você se lembre para sempre.`,
+    description: `Amamos contar histórias e registra-las através da fotografia. Queremos registrar sua história para que você lembre-se dela para sempre.`,
     author: `@guielu_fotos`,
   },
   plugins: [

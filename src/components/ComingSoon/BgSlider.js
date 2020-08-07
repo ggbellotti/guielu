@@ -20,13 +20,6 @@ const BgSlider = () => {
       }
     }
   `)
-  return (
-    <BackgroundSlider
-      initDelay={3}
-      transition={3}
-      duration={10}
-      query={query}
-    />
-  )
+  return <BackgroundSlider duration={3} query={query} />
 }
 export default BgSlider

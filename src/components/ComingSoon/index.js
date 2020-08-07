@@ -1,30 +1,31 @@
 import * as S from "./styles"
 
-import { graphql, useStaticQuery } from "gatsby"
-
+import BgSlider from "./BgSlider"
 import { FacebookSquare } from "@styled-icons/boxicons-logos/FacebookSquare"
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram"
-// import BgSlider from "./BgSlider"
 import Logo from "../../images/logo-vetor-branco.svg"
 import React from "react"
 import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp"
 
+// import { graphql, useStaticQuery } from "gatsby"
+
+
 const ComingSoon = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      pills: file(relativePath: { eq: "001.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 60) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     pills: file(relativePath: { eq: "001.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 1920, quality: 60) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <S.Wrapper>
-      <S.Background fluid={data.pills.childImageSharp.fluid} />
-      {/* <BgSlider /> */}
+      {/* <S.Background fluid={data.pills.childImageSharp.fluid} /> */}
+      <BgSlider />
       <S.Infos>
         <S.Logo src={Logo} />
         <S.Description>

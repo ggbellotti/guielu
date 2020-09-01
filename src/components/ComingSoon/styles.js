@@ -1,4 +1,5 @@
 import Img from "gatsby-image"
+import LogoSvg from "../../images/logo-vetor-branco.svg"
 import styled from "styled-components"
 
 export const Wrapper = styled.section`
@@ -30,7 +31,7 @@ export const Background = styled(Img)`
   height: 100vh;
   min-height: 350px;
 `
-export const Logo = styled.img`
+export const Logo = styled(LogoSvg)`
   width: 200px;
   height: auto;
   margin-bottom: 25px;

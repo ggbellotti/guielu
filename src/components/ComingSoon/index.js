@@ -3,12 +3,10 @@ import * as S from "./styles"
 import BgSlider from "./BgSlider"
 import { FacebookSquare } from "@styled-icons/boxicons-logos/FacebookSquare"
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram"
-import Logo from "../../images/logo-vetor-branco.svg"
 import React from "react"
 import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp"
 
 // import { graphql, useStaticQuery } from "gatsby"
-
 
 const ComingSoon = () => {
   // const data = useStaticQuery(graphql`
@@ -27,7 +25,7 @@ const ComingSoon = () => {
       {/* <S.Background fluid={data.pills.childImageSharp.fluid} /> */}
       <BgSlider />
       <S.Infos>
-        <S.Logo src={Logo} />
+        <S.Logo />
         <S.Description>
           Estamos atualizando algumas coisas... <br />
           Enquanto isso, fale conosco pelos canais abaixo:

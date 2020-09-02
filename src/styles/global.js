@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     font-family: "Barlow Semi Condensed";
     font-weight: 400;
+    background-color: blue;
   }
   ol, ul {
     list-style: none;

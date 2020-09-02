@@ -1,3 +1,4 @@
+import media from 'styled-media-query'
 import styled from "styled-components"
 
 export const Social = styled.div`
@@ -5,6 +6,9 @@ export const Social = styled.div`
   svg {
     width: 20px;
   }
+  ${media.lessThan("medium")`
+    margin-right: 65px;
+  `}
 `
 export const SocialLinks = styled.a`
   color: black;

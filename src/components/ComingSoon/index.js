@@ -3,6 +3,7 @@ import * as S from "./styles"
 import BgSlider from "./BgSlider"
 import { FacebookSquare } from "@styled-icons/boxicons-logos/FacebookSquare"
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram"
+import Logo from "../Logo"
 import React from "react"
 import { Whatsapp } from "@styled-icons/boxicons-logos/Whatsapp"
 
@@ -18,14 +19,14 @@ const ComingSoon = () => {
   //         }
   //       }
   //     }
-  //   }
+  //   }To doido para ver como fez/fará o menu
   // `)
   return (
     <S.Wrapper>
       {/* <S.Background fluid={data.pills.childImageSharp.fluid} /> */}
       <BgSlider />
       <S.Infos>
-        <S.Logo />
+        <Logo white large center />
         <S.Description>
           Estamos atualizando algumas coisas... <br />
           Enquanto isso, fale conosco pelos canais abaixo:

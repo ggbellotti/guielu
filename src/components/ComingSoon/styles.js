@@ -19,7 +19,7 @@ export const Description = styled.h1`
   font-size: 1em;
   color: white;
   text-align: center;
-  margin-bottom: 25px;
+  margin: 25px 0;
 `
 export const Background = styled(Img)`
   object-fit: cover;

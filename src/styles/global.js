@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   :root{
-    --color-secondary: #649CC3;
+    --color-secondary: rgba(100, 156, 195, 1);
+    --color-tertiary: rgba(68, 123, 160, 1);
     --transition-default: color 0.125s ease-in;
   }
   html, body, div, span, applet, object, iframe,
@@ -34,7 +35,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     font-family: "Barlow Semi Condensed";
     font-weight: 400;
-    background-color: blue;
   }
   ol, ul {
     list-style: none;

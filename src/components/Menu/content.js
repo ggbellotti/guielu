@@ -1,44 +1,35 @@
-import React from 'react';
-import SocialLinks from '../SocialLinks'
-import styled from 'styled-components';
+import * as S from "./styles"
 
-const Ul = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-flow: row nowrap;
-  li {
-    padding: 0 10px;
-  }
-  @media (max-width: 768px) {
-    flex-flow: column nowrap;
-    background-color: #0D2538;
-    position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 300px;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
-    li {
-      color: #fff;
-    }
-  }
-`
-const SocialLinksMobile = styled(SocialLinks)`
-  display: none;
-`
+import React from "react"
+import SocialLinks from "../SocialLinks"
 
 const Navbar = ({ open }) => {
   return (
-    <Ul open={open}>
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Contact Us</li>
-      <li>Sign In</li>
-      <li>Sign Up</li>
-      <SocialLinksMobile open={open} />
-    </Ul>
+    <S.WrapperMenu open={open}>
+      <S.MenuList>
+        <S.MenuItem>
+          <S.MenuLink activeClassName="active" to="/home" title="Inicio">
+            Inicio
+          </S.MenuLink>
+        </S.MenuItem>
+        <S.MenuItem>
+          <S.MenuLink activeClassName="active" to="/ensaios" title="Ensaios">
+            Ensaios
+          </S.MenuLink>
+        </S.MenuItem>
+        <S.MenuItem>
+          <S.MenuLink activeClassName="active" to="/blog" title="Blog">
+            Blog
+          </S.MenuLink>
+        </S.MenuItem>
+        <S.MenuItem>
+          <S.MenuLink activeClassName="active" to="/contato" title="Contato">
+            Contato
+          </S.MenuLink>
+        </S.MenuItem>
+        <SocialLinks />
+      </S.MenuList>
+    </S.WrapperMenu>
   )
 }
 

@@ -6,9 +6,7 @@ import React from "react"
 const BgSlider = () => {
   const query = useStaticQuery(graphql`
     query {
-      backgrounds: allFile(
-        filter: { sourceInstanceName: { eq: "backgrounds" } }
-      ) {
+      backgrounds: allFile(filter: { sourceInstanceName: { eq: "carousel" } }) {
         nodes {
           relativePath
           childImageSharp {

@@ -13,4 +13,4 @@ background: ../static/assets/img/luana-ensaio-casa.jpg
 
 dasudhausd
 
-![Ahhh](/static/assets/img/luana-ensaio-casa.jpg)
+![Ahhh](/assets/img/luana-ensaio-casa.jpg)

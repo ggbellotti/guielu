@@ -11,4 +11,4 @@ background: ../static/assets/img/002.jpg
 
 ## Ensaio de gestante
 
-![Ahhh](/static/assets/img/002.jpg)
+![Ahhh](/assets/img/002.jpg)

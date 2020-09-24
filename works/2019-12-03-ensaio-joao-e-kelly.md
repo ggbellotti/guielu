@@ -13,4 +13,4 @@ background: ../static/assets/img/003.jpg
 
 dasudhausd
 
-![Ahhh](/static/assets/img/003.jpg)
+![Ahhh](/assets/img/003.jpg)

@@ -27,6 +27,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `comments`,
+        path: `${__dirname}/comments`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `uploads`,
         path: `${__dirname}/static/assets/img`,
       },

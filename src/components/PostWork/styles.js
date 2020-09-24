@@ -2,19 +2,10 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-export const Wrapper = styled.section`
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 45px;
-`
 export const Container = styled.div`
   width: 100%;
 `
-export const Title = styled.h1`
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin: 40px 0;
-`
+export const Title = styled.h1``
 export const WorkWrapper = styled.div`
   width: 100%;
   display: grid;

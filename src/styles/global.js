@@ -36,6 +36,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Barlow Semi Condensed";
     font-weight: 400;
   }
+  h1{
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 40px 0;
+  }
   ol, ul {
     list-style: none;
   }

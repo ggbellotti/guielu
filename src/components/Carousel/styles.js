@@ -1,7 +1,7 @@
 import media from "styled-media-query"
 import styled from "styled-components"
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.header`
   max-height: 530px;
   min-height: 450px;
   height: 100vh;
@@ -31,4 +31,6 @@ export const Legend = styled.h1`
   padding: 10px 20px;
   font-size: 0.75rem;
   color: #fff;
+  font-weight: 400;
+  margin: 0;
 `

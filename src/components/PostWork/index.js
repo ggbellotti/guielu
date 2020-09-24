@@ -35,37 +35,35 @@ const Works = props => {
   const worksList = allMarkdownRemark.edges
 
   return (
-    <S.Wrapper>
-      <S.Container>
-        <S.Title>{props.title || "Últimos ensaios"}</S.Title>
-        <S.WorkWrapper>
-          {worksList.map(
-            ({
-              node: {
-                id,
-                frontmatter: {
-                  background: {
-                    childImageSharp: { fluid },
-                  },
-                  title,
-                  description,
+    <S.Container>
+      <S.Title>{props.title || "Últimos ensaios"}</S.Title>
+      <S.WorkWrapper>
+        {worksList.map(
+          ({
+            node: {
+              id,
+              frontmatter: {
+                background: {
+                  childImageSharp: { fluid },
                 },
-                fields: { slug },
+                title,
+                description,
               },
-            }) => (
-              <Content
-                key={id}
-                slug={slug}
-                background={fluid}
-                title={title}
-                description={description}
-              />
-            )
-          )}
-        </S.WorkWrapper>
-        <S.ButtonMore to="/ensaios">Ver mais ensaios</S.ButtonMore>
-      </S.Container>
-    </S.Wrapper>
+              fields: { slug },
+            },
+          }) => (
+            <Content
+              key={id}
+              slug={slug}
+              background={fluid}
+              title={title}
+              description={description}
+            />
+          )
+        )}
+      </S.WorkWrapper>
+      <S.ButtonMore to="/ensaios">Ver mais ensaios</S.ButtonMore>
+    </S.Container>
   )
 }
 

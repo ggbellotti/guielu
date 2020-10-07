@@ -18,7 +18,7 @@ const Contents = () => {
             frontmatter {
               comments
               name
-              date(formatString: "MMM/YYYY")
+              date(formatString: "MMM/YYYY", locale: "pt-BR")
               ImageComment {
                 childImageSharp {
                   fluid(maxWidth: 800) {

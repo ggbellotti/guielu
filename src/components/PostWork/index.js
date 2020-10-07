@@ -8,7 +8,7 @@ import React from "react"
 const Works = props => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query WorksList {
-      allMarkdownRemark {
+      allMarkdownRemark(limit: 3, sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             id

@@ -17,6 +17,11 @@ const Comments = () => {
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide)
     },
+    breakpoints: {
+      "(max-width: 1170px)": {
+        slidesPerView: slidesPerView - 1,
+      },
+    },
   })
 
   return (
@@ -27,7 +32,7 @@ const Comments = () => {
       </S.WrapperComment>
       {slider && (
         <S.Dots>
-          {[...Array(slider.details().size - slidesPerView + 1).keys()].map(
+          {[...Array(slider.details().size - slidesPerView + 2).keys()].map(
             idx => {
               return (
                 <S.Dot

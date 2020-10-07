@@ -14,12 +14,19 @@ export const ItemComment = styled.div`
   min-height: 250px;
   background-color: #f3f3f3;
   overflow: auto;
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 `
 export const PhotoItemComment = styled.div`
   width: 100%;
   min-width: 160px;
   max-width: 200px;
   height: 100%;
+  @media (max-width: 550px) {
+    max-width: 100%;
+    height: 250px;
+  }
   .gatsby-image-wrapper {
     height: inherit;
   }
@@ -47,15 +54,16 @@ export const TextItemComment = styled.p`
 export const DateItemComment = styled.p`
   font-size: 12px;
   font-weight: 200;
+  text-transform: capitalize;
 `
 
 export const Dot = styled.button`
   border: none;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: #c5c5c5;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 10px;
   padding: 5px;
   cursor: pointer;
 
@@ -65,6 +73,11 @@ export const Dot = styled.button`
 
   &.active {
     background: #000;
+  }
+  @media (min-width: 1170px) {
+    &:last-of-type {
+      display: none;
+    }
   }
 `
 export const Dots = styled.div`

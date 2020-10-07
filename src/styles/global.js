@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import media from "styled-media-query"
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -40,6 +41,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.75rem;
     font-weight: 600;
     margin: 40px 0;
+    ${media.lessThan("small")`
+      line-height: 1.25;
+    `}
   }
   ol, ul {
     list-style: none;

@@ -1,5 +1,6 @@
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import media from "styled-media-query"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -11,6 +12,9 @@ export const WorkWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  ${media.lessThan("medium")`
+    grid-template-columns: 1fr;
+  `}
 `
 export const WorkItem = styled(Link)`
   width: 100%;

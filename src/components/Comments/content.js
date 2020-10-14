@@ -19,13 +19,16 @@ const Contents = () => {
               comments
               name
               date(formatString: "MMM/YYYY", locale: "pt-BR")
-              ImageComment {
+              imageComment {
                 childImageSharp {
                   fluid(maxWidth: 800) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
+            }
+            fields {
+              slug
             }
           }
         }
@@ -40,13 +43,14 @@ const Contents = () => {
           node: {
             id,
             frontmatter: {
-              ImageComment: {
+              imageComment: {
                 childImageSharp: { fluid },
               },
               comments,
               name,
               date,
             },
+            fields: { slug },
           },
         }) => (
           <S.ItemComment className="keen-slider__slide" key={id}>
@@ -55,8 +59,9 @@ const Contents = () => {
             </S.PhotoItemComment>
             <S.InfosItemComment>
               <S.NameItemComment>{name}</S.NameItemComment>
-              <S.TextItemComment>“{comments}”</S.TextItemComment>
               <S.DateItemComment>{date}</S.DateItemComment>
+              <S.TextItemComment>“{comments}”</S.TextItemComment>
+              <S.LinkItemComment to={slug}>Ver ensaio</S.LinkItemComment>
             </S.InfosItemComment>
           </S.ItemComment>
         )

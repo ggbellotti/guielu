@@ -45,6 +45,14 @@ const GlobalStyle = createGlobalStyle`
       line-height: 1.25;
     `}
   }
+  h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0;
+    ${media.lessThan("small")`
+      line-height: 1.10;
+    `}
+  }
   ol, ul {
     list-style: none;
   }
@@ -59,6 +67,13 @@ const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
-}
+  }
+  .medium-zoom-overlay {
+    z-index: 99; 
+    background-color: rgba(0, 0, 0, .75) !important;
+  }
+  .medium-zoom-image--opened{
+    z-index: 99;
+  }
 `
 export default GlobalStyle

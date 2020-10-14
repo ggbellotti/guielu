@@ -24,7 +24,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/work-post.js`)
+  const workPostTemplate = path.resolve(`src/templates/work-post.js`)
   // Query for markdown nodes to use in creating pages.
   // You can query for whatever data you want to create pages for e.g.
   // products, portfolio items, landing pages, etc.
@@ -49,12 +49,12 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog post pages.
+    // Create work post pages.
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         // Path for this page — required
         path: `${node.fields.slug}`,
-        component: blogPostTemplate,
+        component: workPostTemplate,
         context: {
           slug: node.fields.slug,
         },

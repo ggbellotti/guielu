@@ -47,7 +47,7 @@ export const WorkInfos = styled.div`
 `
 export const WorkInfosTitle = styled.h2`
   color: #fff;
-  font-size: 1.5rem;
+  margin: 0;
 `
 export const WorkInfosDescription = styled.p`
   color: #fff;

@@ -1,23 +1,21 @@
-import Contact from '../components/Contact'
 import Footer from "../components/Footer"
 import GlobalStyle from "../styles/global"
 import Layout from "../components/Layout"
 import Menu from "../components/Menu"
-import PostWorkAll from '../components/PostWorkAll'
+import PostBlogAll from "../components/PostBlogAll"
 import React from "react"
 
-const WorkPage = () => {
+const BlogPage = () => {
   return (
     <>
       <GlobalStyle />
       <Menu />
       <Layout>
-        <PostWorkAll />
-        <Contact />
+        <PostBlogAll />
       </Layout>
       <Footer />
     </>
   )
 }
 
-export default WorkPage
+export default BlogPage

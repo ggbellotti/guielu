@@ -27,6 +27,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `uploads`,
         path: `${__dirname}/static/assets/img`,
       },
@@ -56,6 +63,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-images-zoom`,
           `gatsby-remark-lazy-load`,
         ],
       },
@@ -70,7 +78,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Barlow Semi Condensed\:200,400,600`],
+        fonts: [`Barlow Semi Condensed\:200,200i,400,400i,600,600i`],
         display: "swap",
       },
     },

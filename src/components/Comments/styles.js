@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -43,7 +44,6 @@ export const InfosItemComment = styled.div`
 export const NameItemComment = styled.p`
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 20px;
 `
 export const TextItemComment = styled.p`
   font-size: 18px;
@@ -55,8 +55,14 @@ export const DateItemComment = styled.p`
   font-size: 12px;
   font-weight: 200;
   text-transform: capitalize;
+  margin-bottom: 20px;
 `
-
+export const LinkItemComment = styled(Link)`
+  text-decoration: underline;
+  display: inline-block;
+  color: #000;
+  font-size: 16px;
+`
 export const Dot = styled.button`
   border: none;
   width: 15px;

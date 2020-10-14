@@ -1,15 +1,14 @@
-import * as S from "./styles"
+import * as S from "../PostWork/styles"
 
 import { graphql, useStaticQuery } from "gatsby"
 
-import Content from "./content"
+import Content from "../PostWork/content"
 import React from "react"
 
-const Works = props => {
+const PostWorkAll = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query WorksList {
+    query WorksListAll {
       allMarkdownRemark(
-        limit: 3
         sort: { fields: frontmatter___date, order: DESC }
         filter: { fileAbsolutePath: { regex: "/works/" } }
       ) {
@@ -35,12 +34,11 @@ const Works = props => {
       }
     }
   `)
-
   const worksList = allMarkdownRemark.edges
 
   return (
-    <S.Container>
-      <S.Title>{props.title || "Últimos ensaios"}</S.Title>
+    <S.Container style={{ marginTop: "125px" }}>
+      <S.Title>Últimos ensaios</S.Title>
       <S.WorkWrapper>
         {worksList.map(
           ({
@@ -66,9 +64,8 @@ const Works = props => {
           )
         )}
       </S.WorkWrapper>
-      <S.ButtonMore to="/ensaios">Ver mais ensaios</S.ButtonMore>
     </S.Container>
   )
 }
 
-export default Works
+export default PostWorkAll

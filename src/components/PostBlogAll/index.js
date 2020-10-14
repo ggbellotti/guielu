@@ -5,13 +5,12 @@ import { graphql, useStaticQuery } from "gatsby"
 import Content from "./content"
 import React from "react"
 
-const Works = props => {
+const PostBlogAll = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query WorksList {
+    query BlogList {
       allMarkdownRemark(
-        limit: 3
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { fileAbsolutePath: { regex: "/works/" } }
+        filter: { fileAbsolutePath: { regex: "/blog/" } }
       ) {
         edges {
           node {
@@ -27,8 +26,9 @@ const Works = props => {
                   }
                 }
               }
-              description
               title
+              category
+              date(locale: "pt-BR", formatString: "DD [de] MMMM [de] YYYY")
             }
           }
         }
@@ -36,13 +36,13 @@ const Works = props => {
     }
   `)
 
-  const worksList = allMarkdownRemark.edges
+  const blogList = allMarkdownRemark.edges
 
   return (
-    <S.Container>
-      <S.Title>{props.title || "Últimos ensaios"}</S.Title>
-      <S.WorkWrapper>
-        {worksList.map(
+    <S.Container style={{ marginTop: "125px" }}>
+      <S.Title>Artigos que vão te interessar</S.Title>
+      <S.BlogWrapper>
+        {blogList.map(
           ({
             node: {
               id,
@@ -51,7 +51,8 @@ const Works = props => {
                   childImageSharp: { fluid },
                 },
                 title,
-                description,
+                category,
+                date,
               },
               fields: { slug },
             },
@@ -61,14 +62,14 @@ const Works = props => {
               slug={slug}
               background={fluid}
               title={title}
-              description={description}
+              category={category}
+              date={date}
             />
           )
         )}
-      </S.WorkWrapper>
-      <S.ButtonMore to="/ensaios">Ver mais ensaios</S.ButtonMore>
+      </S.BlogWrapper>
     </S.Container>
   )
 }
 
-export default Works
+export default PostBlogAll

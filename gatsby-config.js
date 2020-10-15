@@ -65,6 +65,7 @@ module.exports = {
           },
           `gatsby-remark-images-zoom`,
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },

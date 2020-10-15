@@ -47,6 +47,26 @@ export const MainWork = styled.main`
     margin: 15px 0;
     max-width: 100%;
     overflow: scroll;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
   ul {
     list-style: square;
@@ -77,5 +97,9 @@ export const MainWork = styled.main`
   .gatsby-resp-image-wrapper {
     margin: 25px auto;
     max-width: 768px !important;
+  }
+  .gatsby-resp-iframe-wrapper {
+    margin: 25px auto;
+    max-width: 990px;
   }
 `

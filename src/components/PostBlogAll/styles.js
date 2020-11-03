@@ -1,5 +1,5 @@
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import media from "styled-media-query"
 import styled from "styled-components"
 
@@ -72,7 +72,7 @@ export const BlogInfosDate = styled.p`
   padding: 0;
   font-weight: 200;
 `
-export const BlogItem = styled(Link)`
+export const BlogItem = styled(AniLink)`
   box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   position: relative;

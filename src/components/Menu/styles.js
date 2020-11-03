@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import media from "styled-media-query"
 import styled from "styled-components"
 
@@ -36,7 +36,7 @@ export const WrapperMenu = styled.div`
     opacity: ${({ open }) => (open ? "1" : "0")};
     z-index: ${({ open }) => (open ? "98" : "-1")};
     transition: opacity 0.175s;
-    overflow: scroll;
+    overflow: auto;
 `}
 `
 export const MenuList = styled.ul`
@@ -48,7 +48,7 @@ export const MenuList = styled.ul`
   ${media.lessThan("medium")`
     flex-flow: column nowrap;
     background-color: #fff;
-    height: 100vh;
+    height: auto;
     min-height: 350px;
     width: 300px;
     padding-top: 4.5rem;
@@ -65,25 +65,27 @@ export const MenuItem = styled.li`
     text-align: center;
   `}
 `
-export const MenuLink = styled(Link)`
+export const MenuLink = styled(AniLink)`
   text-decoration: none;
   color: #000;
-  &.active::after {
+  &::after {
     content: "";
     width: 100%;
     height: 1px;
-    background-color: var(--color-secondary);
+    background-color: transparent;
     display: block;
   }
-  &:hover::after {
-    content: "";
-    width: 100%;
-    height: 1px;
+  &.active::after {
     background-color: var(--color-secondary);
-    display: block;
+  }
+  &:hover::after {
+    background-color: var(--color-secondary);
   }
   ${media.lessThan("medium")`
     font-size: 1.5rem;
+    &::after {
+      display: none;
+    }
     &.active::after {
       display: none;
     }

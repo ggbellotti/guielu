@@ -1,5 +1,5 @@
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import media from "styled-media-query"
 import styled from "styled-components"
 
@@ -16,7 +16,7 @@ export const WorkWrapper = styled.div`
     grid-template-columns: 1fr;
   `}
 `
-export const WorkItem = styled(Link)`
+export const WorkItem = styled(AniLink)`
   width: 100%;
   height: 450px;
   text-decoration: none;
@@ -53,7 +53,7 @@ export const WorkInfosDescription = styled.p`
   color: #fff;
   font-size: 1.125rem;
 `
-export const ButtonMore = styled(Link)`
+export const ButtonMore = styled(AniLink)`
   margin: 40px auto;
   text-decoration: none;
   background-color: var(--color-secondary);

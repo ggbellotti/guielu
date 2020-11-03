@@ -3,12 +3,14 @@ module.exports = {
     title: `Guielu Fotografia`,
     description: `Amamos contar histórias e registra-las através da fotografia. Queremos registrar sua história para que você lembre-se dela para sempre.`,
     author: `@guielu_fotos`,
+    siteUrl: `https://guielu.com.br`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-transition-link`,
     // {
     //   resolve: "gatsby-plugin-react-svg",
     //   options: {
@@ -63,8 +65,8 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          `gatsby-remark-images-zoom`,
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-images-zoom`,
           `gatsby-remark-responsive-iframe`,
         ],
       },
@@ -86,7 +88,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `guielu-fotografia`,
+        name: `Guielu Fotografia`,
         short_name: `Guielu`,
         start_url: `/`,
         background_color: `#fff`,
@@ -95,8 +97,10 @@ module.exports = {
         icon: `src/images/logo-icon-preto.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }

@@ -15,7 +15,11 @@ const WorkPost = ({ data }) => {
       <GlobalStyle />
       <Menu />
       <Layout>
-        <SEO title={post.frontmatter.title} />
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          background={post.frontmatter.background.childImageSharp.fixed.src}
+        />
         <S.Content>
           <S.HeaderWork>
             <S.DateWork>{post.frontmatter.date}</S.DateWork>
@@ -40,9 +44,15 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY ")
+        background {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
       }
       html
-      timeToRead
     }
   }
 `

@@ -10,7 +10,10 @@ const BlogPage = () => {
   return (
     <>
       <GlobalStyle />
-      <SEO title="Ideias, dicas e muito mais" />
+      <SEO
+        title="Ideias, dicas e muito mais"
+        description="Temos algumas dicas e ideias para sua sessão fotográfica, não deixe de ler nosso conteúdo!"
+      />
       <Menu />
       <Layout>
         <PostBlogAll />

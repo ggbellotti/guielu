@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -57,7 +57,7 @@ export const DateItemComment = styled.p`
   text-transform: capitalize;
   margin-bottom: 20px;
 `
-export const LinkItemComment = styled(Link)`
+export const LinkItemComment = styled(AniLink)`
   text-decoration: underline;
   display: inline-block;
   color: #000;

@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: guilhermebellotti/guielu
+  branch: master # Branch to update (optional; defaults to master)
+  site_domain: https://guielu.com.br/
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img"
+public_folder: "assets/img"
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Data de publicação",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Categoria",
+          name: "category",
+          widget: "select",
+          options: ["Dicas", "Ensaios", "Fotografia", "Locais", "Casamentos"],
+        }
+      - { label: "Imagem de destaque", name: "background", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "ensaios" # Used in routes, e.g., /admin/collections/blog
+    label: "Ensaios" # Used in the UI
+    folder: "works" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Data de publicação",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "Nome(s)", name: "name", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - {
+          label: "Tem comentário?",
+          name: "comment",
+          widget: "select",
+          options:
+            [{ label: "Sim", value: "yes" }, { label: "Não", value: "no" }],
+        }
+      - { label: "Comentário", name: "commcommentsent", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Categoria",
+          name: "category",
+          widget: "select",
+          options: ["Dicas", "Ensaios", "Fotografia", "Locais", "Casamentos"],
+        }
+      - { label: "Imagem de destaque", name: "background", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

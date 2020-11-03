@@ -66,7 +66,9 @@ const Works = props => {
           )
         )}
       </S.WorkWrapper>
-      <S.ButtonMore to="/ensaios">Ver mais ensaios</S.ButtonMore>
+      <S.ButtonMore fade duration={0.25} to="/ensaios">
+        Ver mais ensaios
+      </S.ButtonMore>
     </S.Container>
   )
 }

@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import React from "react"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, background }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -27,7 +28,8 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const url = site.siteMetadata.siteUrl
+  const ogImage = `${url}${background || "/assets/img/guilherme-luana.jpg"}`
   return (
     <Helmet
       htmlAttributes={{
@@ -51,6 +53,14 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: ogImage,
+        },
+        {
+          property: `twitter:img:src`,
+          content: ogImage,
         },
         {
           name: `twitter:card`,

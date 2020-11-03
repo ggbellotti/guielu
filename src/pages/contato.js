@@ -11,7 +11,10 @@ const ContactPage = () => {
   return (
     <>
       <GlobalStyle />
-      <SEO title="Registre sua história, deixe fotografado" />
+      <SEO
+        title="Registre sua história, deixe fotografado"
+        description="Não deixe de registrar o momento de sua vida. A fotografia nos proporciona momentos emocionantes."
+      />
       <Menu />
       <BannerFullWidth />
       <Layout>

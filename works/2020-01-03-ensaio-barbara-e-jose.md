@@ -79,8 +79,8 @@ quique, Ardea lacertis at oculos docuique nitorem hunc.
 [Faça seu ensaio conosco!](http://www.mandata.com/osculafaciunt)
 
 ![Ahhh](/assets/img/002.jpg)
-![Ahhh](/assets/img/002.jpg)
-![Ahhh](/assets/img/002.jpg)
-![Ahhh](/assets/img/002.jpg)
+![Ahhh](/assets/img/003.jpg)
+![Ahhh](/assets/img/guilherme-luana.jpg)
+![Ahhh](/assets/img/luana-ensaio-casa.jpg)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NrgmdOz227I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

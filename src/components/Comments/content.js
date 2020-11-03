@@ -61,7 +61,9 @@ const Contents = () => {
               <S.NameItemComment>{name}</S.NameItemComment>
               <S.DateItemComment>{date}</S.DateItemComment>
               <S.TextItemComment>“{comments}”</S.TextItemComment>
-              <S.LinkItemComment to={slug}>Ver ensaio</S.LinkItemComment>
+              <S.LinkItemComment fade duration={0.25} to={slug}>
+                Ver ensaio
+              </S.LinkItemComment>
             </S.InfosItemComment>
           </S.ItemComment>
         )

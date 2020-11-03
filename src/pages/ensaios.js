@@ -11,7 +11,7 @@ const WorkPage = () => {
   return (
     <>
       <GlobalStyle />
-      <SEO title="Ensaios em São Paulo" />
+      <SEO title="Ensaios em São Paulo" description="" />
       <Menu />
       <Layout>
         <PostWorkAll />

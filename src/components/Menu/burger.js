@@ -6,7 +6,6 @@ import Content from "./content"
 
 const Burger = () => {
   const [open, setOpen] = useState(false)
-
   return (
     <>
       <S.StyledBurger open={open} onClick={() => setOpen(!open)}>
@@ -14,6 +13,7 @@ const Burger = () => {
         <div />
         <div />
       </S.StyledBurger>
+
       <Content open={open} />
     </>
   )

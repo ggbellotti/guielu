@@ -5,7 +5,7 @@ import React from "react"
 
 const Content = ({ slug, background, category, title, date }) => {
   return (
-    <S.BlogItem to={slug}>
+    <S.BlogItem fade duration={0.25} to={slug}>
       <S.BlogBackground fluid={background} />
       <S.BlogOverlay />
       <S.BlogInfos>

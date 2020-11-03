@@ -6,7 +6,7 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
-public_folder: "assets/img"
+public_folder: "../static/assets/img"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -44,7 +44,6 @@ collections:
           format: "YYYY-MM-DD hh:mm:ss",
         }
       - { label: "Nome(s)", name: "name", widget: "string" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true }
       - {
           label: "Tem comentário?",
           name: "comment",
@@ -52,13 +51,14 @@ collections:
           options:
             [{ label: "Sim", value: "yes" }, { label: "Não", value: "no" }],
         }
-      - { label: "Comentário", name: "commcommentsent", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
       - {
-          label: "Categoria",
-          name: "category",
-          widget: "select",
-          options: ["Dicas", "Ensaios", "Fotografia", "Locais", "Casamentos"],
+          label: "Comentário",
+          name: "comments",
+          widget: "string",
+          default: "-",
         }
+      - { label: "Imagem do comentário", name: "imageComment", widget: "image" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "string" }
       - { label: "Imagem de destaque", name: "background", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }

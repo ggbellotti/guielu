@@ -25,7 +25,7 @@ const SocialLinks = ({ hideMobile }) => {
         <Whatsapp />
       </S.SocialLinks>
       <S.SocialLinks
-        href="https://instagram.com/guielu_fotos"
+        href="https://www.instagram.com/guielu_fotografia/"
         target="_blank"
         rel="noopener noreferrer"
         title="Instagram"

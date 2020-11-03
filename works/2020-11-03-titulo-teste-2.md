@@ -1,8 +1,8 @@
 ---
 date: 2020-11-03 03:33:02
 name: Nome teste 2
-comment: no
-comments: "-"
+comment: yes
+comments: Aeee o feliz fez um comentário!! DASDAS
 imageComment: ../static/assets/img/guilherme-luana.jpg
 title: Titulo teste 2
 description: Descrição teste 2

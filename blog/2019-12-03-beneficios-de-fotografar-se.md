@@ -2,7 +2,7 @@
 date: 2020-01-03 05:54:23
 title: Benefícios de fotografar-se
 category: Dicas
-background: ../static/assets/img/002.jpg
+background: ../static/assets/img/_MG_3806.jpg
 ---
 
 A fotografia é o meio no qual se grava e se reproduz manifestações de cultura, é o ato em que se flagra/captura um momento, um acontecimento único, exclusivo e finito, que jamais acontecerá outra vez.

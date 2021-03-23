@@ -1,11 +1,20 @@
+import Footer from "../components/Footer"
+import GlobalStyle from "../styles/global"
+import Layout from "../components/Layout"
+import Menu from "../components/Menu"
+import NotFound from "../components/NotFound"
 import React from "react"
 import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <>
-    <SEO title="404: Não encontrado" />
-    <h1>Não encontrado :S</h1>
-    <p>O endereço ou link que você está tentando acessar, não existe...</p>
+    <GlobalStyle />
+    <SEO title="Ensaios em São Paulo" description="" />
+    <Menu />
+    <Layout>
+      <NotFound />
+    </Layout>
+    <Footer />
   </>
 )
 

@@ -15,7 +15,7 @@ const Navbar = ({ open }) => {
             duration={0.6}
             bg="#ffffff"
             activeClassName="active"
-            to="/home"
+            to="/"
             title="Inicio"
           >
             Inicio

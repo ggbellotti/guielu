@@ -2554,9 +2554,6 @@
   version "10.18.0"
   resolved "https://registry.yarnpkg.com/@styled-icons/entypo/-/entypo-10.18.0.tgz#9d98e8a432215257cca9f7383cae28ce388b6800"
   integrity sha512-FZdYzBiqXgas/c76eeCSWfEy6jpzfvucIXMgwsTDQioh7/x9qVmuyz5TVlghx2zWmtoz4hEnLIDD0Yzw1ajXWQ==
-  dependencies:
-    "@babel/runtime" "^7.10.5"
-    "@styled-icons/styled-icon" "^10.6.0"
 
 "@styled-icons/evaicons-outline@^10.18.0":
   version "10.18.0"
@@ -4696,12 +4693,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111:
-  version "1.0.30001204"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001204.tgz"
-  integrity sha512-JUdjWpcxfJ9IPamy2f5JaRDCaqJOxDzOSKtbdx4rH9VivMd1vIzoPumsJa9LoMIi4Fx2BV2KZOxWhNkBjaYivQ==
-
-caniuse-lite@^1.0.30001204:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111, caniuse-lite@^1.0.30001204:
   version "1.0.30001204"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001204.tgz#256c85709a348ec4d175e847a3b515c66e79f2aa"
   integrity sha512-JUdjWpcxfJ9IPamy2f5JaRDCaqJOxDzOSKtbdx4rH9VivMd1vIzoPumsJa9LoMIi4Fx2BV2KZOxWhNkBjaYivQ==

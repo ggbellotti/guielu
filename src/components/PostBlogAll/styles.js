@@ -10,7 +10,7 @@ export const Title = styled.h1``
 export const BlogWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   @media (max-width: 980px) {
     grid-template-columns: repeat(2, 1fr);
@@ -34,7 +34,7 @@ export const BlogOverlay = styled.div`
     rgba(0, 0, 0, 0.9)
   );
   position: absolute;
-  height: 50%;
+  height: 100%;
   width: 100%;
   z-index: 0;
   transition: all 0.125s ease-in;

@@ -36,11 +36,11 @@ export const Col2 = styled.div`
   `}
   .gatsby-image-wrapper {
     height: 45vh;
-    img {
+    /* img {
       @media (max-width: 1025px) {
         object-position: -240px center !important;
       }
-    }
+    } */
   }
 `
 export const Form = styled.div`

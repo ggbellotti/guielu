@@ -1,5 +1,6 @@
 import * as S from "../components/Works/styles"
 
+import BackButton from "../components/BackButton"
 import Footer from "../components/Footer"
 import GlobalStyle from "../styles/global"
 import Layout from "../components/Layout"
@@ -32,6 +33,7 @@ const WorkPost = ({ data }) => {
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           </S.MainWork>
         </S.Content>
+        <BackButton to="/blog" />
       </Layout>
       <Footer />
     </>

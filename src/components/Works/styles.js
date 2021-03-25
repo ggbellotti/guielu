@@ -31,6 +31,10 @@ export const MainWork = styled.main`
   p {
     font-weight: 200;
     margin-bottom: 15px;
+
+    //images
+    display: flex;
+    flex-flow: wrap;
   }
   strong,
   b {
@@ -96,7 +100,9 @@ export const MainWork = styled.main`
   }
   .gatsby-resp-image-wrapper {
     margin: 25px auto;
-    max-width: 768px !important;
+    height: 100%;
+    width: 100%;
+    max-width: 250px !important;
   }
   .gatsby-resp-iframe-wrapper {
     margin: 25px auto;

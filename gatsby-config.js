@@ -1,3 +1,4 @@
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Guielu Fotografia`,
@@ -52,6 +53,14 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          // {
+          //   resolve: "gatsby-remark-images-grid",
+          //   options: {
+          //     className: "gridsImages",
+          //     gridGap: "20px",
+          //     margin: "20px auto",
+          //   },
+          // },
           {
             resolve: "gatsby-remark-relative-images",
             options: {
@@ -102,5 +111,22 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [process.env.GOOGLE_ANALYTICS_ID],
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true,
+        id: process.env.HOTJAR,
+      },
+    },
   ],
 }

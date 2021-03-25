@@ -8,7 +8,7 @@ import React from "react"
 const Contact = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "guilherme-luana.jpg" }) {
+      file(relativePath: { eq: "guilherme-luana2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG

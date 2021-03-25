@@ -32,15 +32,16 @@ export const WorkBackground = styled(Img)`
   z-index: -1;
 `
 export const WorkInfos = styled.div`
-  width: 100%;
+  width: calc(100% - 20px);
   background-color: rgba(0, 0, 0, 0.85);
-  height: 100%;
+  height: calc(100% - 20px);
   opacity: 0;
   transition: opacity 0.125s;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 10px;
   &:hover {
     opacity: 1;
   }
@@ -48,6 +49,9 @@ export const WorkInfos = styled.div`
 export const WorkInfosTitle = styled.h2`
   color: #fff;
   margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.3;
 `
 export const WorkInfosDescription = styled.p`
   color: #fff;

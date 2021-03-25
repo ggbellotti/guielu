@@ -35,7 +35,7 @@ export const Col2 = styled.div`
     display: none;
   `}
   .gatsby-image-wrapper {
-    height: 45vh;
+    height: 100%;
     /* img {
       @media (max-width: 1025px) {
         object-position: -240px center !important;

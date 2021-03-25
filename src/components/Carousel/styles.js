@@ -24,7 +24,7 @@ export const CaptionBg = styled.div`
   background-color: #000;
   display: block;
   position: absolute;
-  margin-top: -39px;
+  margin-top: -41px;
   right: 0;
 `
 export const Legend = styled.h1`

@@ -2,17 +2,13 @@ import * as S from "./styles"
 
 import React from "react"
 
-function BackButton({ to }) {
+function BackButton() {
   return (
     <S.Container>
       <S.ButtonBack
-        cover
-        direction="right"
-        duration={0.6}
-        bg="#ffffff"
-        activeClassName="active"
-        to={to}
-        title="Inicio"
+        onClick={window.history.back()}
+        title="Voltar"
+        href="#voltar"
       >
         <svg
           version="1.1"

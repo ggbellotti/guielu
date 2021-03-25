@@ -13,12 +13,13 @@ const Carousel = () => {
           query {
             backgrounds: allFile(
               filter: { sourceInstanceName: { eq: "carousel" } }
+              sort: { fields: name, order: ASC }
             ) {
               nodes {
                 relativePath
                 childImageSharp {
                   fluid(maxWidth: 4000, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                    src
                   }
                 }
               }
@@ -30,16 +31,19 @@ const Carousel = () => {
         duration={6} // how long an image is shown
       >
         <S.CaptionBg>
-          <S.Legend>Ensaio fotográfico em São Paulo/SP</S.Legend>
+          <S.Legend>Pré-wedding no Morro Capuava</S.Legend>
         </S.CaptionBg>
         <S.CaptionBg>
-          <S.Legend>Ensaio fotográfico em São Paulo/SP</S.Legend>
-        </S.CaptionBg>
-        <S.CaptionBg>
-          <S.Legend>Ensaio de gestante no parque Água Branca</S.Legend>
+          <S.Legend>Ensaio fotográfico no Parque Ibirapuera</S.Legend>
         </S.CaptionBg>
         <S.CaptionBg>
           <S.Legend>Ensaio de gestante no parque Água Branca</S.Legend>
+        </S.CaptionBg>
+        <S.CaptionBg>
+          <S.Legend>Ensaio em casa - São Paulo/SP</S.Legend>
+        </S.CaptionBg>
+        <S.CaptionBg>
+          <S.Legend>Ensaio na Av. Paulista</S.Legend>
         </S.CaptionBg>
       </BackgroundSlider>
     </S.Wrapper>

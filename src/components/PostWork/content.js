@@ -5,7 +5,16 @@ import React from "react"
 
 const Content = ({ background, slug, title, description }) => {
   return (
-    <S.WorkItem fade duration={0.25} to={slug}>
+    <S.WorkItem
+      cover
+      direction="up"
+      top="entry"
+      duration={0.6}
+      bg="#ffffff"
+      activeClassName="active"
+      title="Inicio"
+      to={slug}
+    >
       <S.WorkBackground fluid={background} />
       <S.WorkInfos>
         <S.WorkInfosTitle>{title}</S.WorkInfosTitle>

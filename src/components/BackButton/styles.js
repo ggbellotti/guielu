@@ -1,4 +1,3 @@
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -7,7 +6,7 @@ export const Container = styled.div`
   justify-content: flex-end;
   width: auto;
 `
-export const ButtonBack = styled(AniLink)`
+export const ButtonBack = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;

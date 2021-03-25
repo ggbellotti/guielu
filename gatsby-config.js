@@ -100,7 +100,7 @@ module.exports = {
         name: `Guielu Fotografia`,
         short_name: `Guielu`,
         start_url: `/`,
-        background_color: `#fff`,
+        background_color: `#000`,
         theme_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/logo-icon-preto.png`, // This path is relative to the root of the site.
